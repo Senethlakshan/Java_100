@@ -1,14 +1,12 @@
-// import static org.junit.jupiter.api.Assertions.assertEquals;
+public class Main extends Thread {
 
-// import org.junit.jupiter.api.Test;
+    public void run() {
+        // Code that will be executed in a new thread
+        System.out.println("MyThread is running");
+    }
 
-public class Main {
-  public static void main(String[] args) {
-    System.out.println("Hello world!");
-  }
-
-  // @Test
-  // void addition() {
-  //     assertEquals(2, 1 + 1);
-  // }
+    public static void main(String[] args) {
+        Main thread = new Main();
+        thread.start(); // Start the thread
+    }
 }
